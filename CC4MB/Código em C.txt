@@ -1,0 +1,307 @@
+1 - #include <stdio.h>
+
+int somar(int x, int y){
+    return x+y;
+}
+
+int main()
+{
+    int a,b;
+    
+    printf("Digite o primeiro número: ");
+    scanf("%d", &a);
+    
+    printf("Digite o segundo número: ");
+    scanf("%d", &b);
+    
+    
+    printf("Resultado: %d", somar(a,b));
+    return 0;
+}
+
+
+
+
+
+2 - 
+
+#include <stdio.h>
+
+int somar(int x, int y, int z){
+    return x+y+z;
+}
+
+int main()
+{
+    int a,b,c;
+    
+    printf("Digite o primeiro número: ");
+    scanf("%d", &a);
+    
+    printf("Digite o segundo e o terceiro número: ");
+    scanf("%d %d", &b, &c);
+   
+    printf("Resultado: %d", somar(a,b,c));
+    return 0;
+}
+
+
+
+
+
+3 -
+
+#include <stdio.h>
+
+float lerNum(float x){
+    return x*x;
+}
+
+int main()
+{
+    float a;
+    
+    printf("Digite um número: ");
+    scanf("%f", &a);
+    
+    
+    printf("Resultado: %.2f", lerNum(a));
+    
+    return 0;   
+}
+
+
+
+
+
+4 - 
+
+#include <stdio.h>
+
+float lerNum(float x){
+    return x/5;
+}
+
+int main()
+{
+    float a;
+    
+    printf("Digite um número: ");
+    scanf("%f", &a);
+    
+    
+    printf("Resultado: %.2f", lerNum(a));
+    
+    return 0;
+}
+
+
+
+
+
+
+5 – 
+
+#include <stdio.h>
+
+float antecessor(float x){
+    return x + 1;
+}
+
+float sucessor(float x){
+    return x - 1;
+}
+int main()
+{
+    float a;
+    
+    printf("Digite um número: ");
+    scanf("%f", &a);
+    
+    
+    printf("Antecessor: %.2f", antecessor(a));
+    printf("\nSucecessor: %.2f", sucessor(a));
+    
+    return 0;
+    
+}
+
+
+
+
+
+
+6 -
+
+#include <stdio.h>
+
+float maior(float x, float y){
+    if(x > y){
+        printf("O número %.2f é maior que %.2f", x,y);
+    }
+    return x;
+}
+
+float menor(float x, float y){
+    if(x < y){
+        printf("O número %.2f é menor que %.2f", x,y);
+    }
+    return y;
+}
+
+int main(){
+    float a, b;
+    printf("Digite os valores: ");
+    scanf("%f %f", &a, &b);
+    
+    maior(a, b);
+    menor(a, b);
+    
+    return 0;
+}
+
+
+
+7 -
+
+#include <stdio.h>
+
+int par(int x){
+    if(x % 2 == 0){
+        printf("O número %d é par! ", x);
+    }
+    else{
+        printf("O número %d não é par! ", x);
+    }
+}
+
+int main()
+{
+    int a;
+    
+    printf("Digite um número: ");
+    scanf("%d", &a);
+    
+    par(a);
+    return 0;
+}
+
+
+
+
+8 - 
+
+#include <stdio.h>
+
+float maior(float x, float y){
+    if(x > y){
+        printf("O número %.2f é maior que %.2f", x,y);
+        return x;
+    }
+    
+    else{
+        printf("O número %.2f é maior que %.2f", y,x);
+        return y;
+    }
+}
+
+float menor(float x, float y){
+    if(x < y){
+        printf("\nO número %.2f é menor que %.2f", x,y);
+        return x;
+    }
+     else{
+        printf("O número %.2f é menor que %.2f", y,x);
+        return y;
+     }
+}
+
+float diferenca(float maior, float menor){
+    return maior - menor;
+}
+
+
+int main(){
+    float a, b, valMaior, valMenor;
+    printf("Digite os valores: ");
+    scanf("%f %f", &a, &b);
+    
+    valMaior = maior(a, b);
+    valMenor = menor(a, b);
+    
+    
+    printf("\nA diferença entre os valores é de: %f", diferenca(valMaior, valMenor));
+    return 0;
+}
+
+
+9 - #include <stdio.h>
+
+void menu() {
+    printf("Soma - 1");
+    printf("\nSubtração - 2");
+    printf("\nMultiplicação - 3");
+    printf("\nDivisão - 4");
+}
+
+void somar(float x, float y) {
+    printf("Resultado: %.2f\n", x + y);
+}
+
+void subtrair(float x, float y) {
+    printf("Resultado: %.2f\n", x - y);
+}
+
+void mult(float x, float y) {
+    printf("Resultado: %.2f\n", x * y);
+}
+
+void dividir(float x, float y) {
+    if (y == 0) {
+        printf("Erro: divisão por zero!\n");
+    } else {
+        printf("Resultado: %.2f\n", x / y);
+    }
+}
+
+int main() {
+    int op;
+    float a, b;
+
+    while (1) {
+        menu();
+        printf("\nSelecione a operação desejada: ");
+        scanf("%d", &op);
+
+        if (op < 1 || op > 4) {
+            printf("Opção inválida! Tente novamente.\n\n");
+            continue; 
+        }
+
+        printf("Digite os números: ");
+        scanf("%f %f", &a, &b);
+
+        if (op == 1) {
+            somar(a, b);
+        } 
+        
+        else if (op == 2) {
+            subtrair(a, b);
+        } 
+        
+        else if (op == 3) {
+            mult(a, b);
+        } 
+        
+        else if (op == 4) {
+            dividir(a, b);
+        }
+
+        break;
+    }
+
+    return 0;
+}
+
+
+

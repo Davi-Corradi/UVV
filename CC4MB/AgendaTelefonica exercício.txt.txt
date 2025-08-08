@@ -1,0 +1,112 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Projeto
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Contato contato = new Contato("Vinicius", "123", "Prof", 1000);
+            Contato contato2 = new Contato("Rosalen", "1234", "Prof TB", 10000);
+            Contato contato3 = new Contato("Hans", "12345", "Holf", 100);
+            
+            AgendaTelefonica agendaTelefonica = new AgendaTelefonica();
+
+            agendaTelefonica.InserirContato(contato.Nome, contato);
+            agendaTelefonica.InserirContato(contato2.Nome, contato);
+            agendaTelefonica.InserirContato(contato3.Nome, contato);
+
+            Console.WriteLine(agendaTelefonica.BuscarContato("Rosalen").Apelido);
+            Console.WriteLine($"Minha agenda tem {agendaTelefonica.QtdContatos()} contatos");
+        }
+    }
+}
+
+
+
+
+
+
+Classe AgendaTelefonica
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Projeto
+{
+    internal class AgendaTelefonica
+    {
+        public Dictionary<string, Contato> Agenda { get; set; }
+
+        public AgendaTelefonica() => Agenda = new Dictionary<string, Contato>();
+
+        //public AgendaTelefonica()
+        //{
+        //    Agenda = new Dictionary<string, Contato>();
+        //}
+
+        public void InserirContato(string nome, Contato contato)
+        {
+              Agenda.Add(nome, contato);
+        }
+            //public AgendaTelefonica(Contato contato)
+            //{
+            //    Agenda.Add(contato.Nome, contato);
+            //}
+        
+        public Contato BuscarContato(string nome)
+        {
+            return Agenda[nome];
+        }
+
+        public int QtdContatos()
+        {
+            return Agenda.Count;
+        }
+
+
+        }
+    }
+
+
+
+
+Classe Contato
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Projeto
+{
+    internal class Contato
+    {
+        public string Nome { get; set; }
+        public string NumeroTelefone { get; set; }
+        public string Apelido { get; set; }
+
+        public int QuantoMeDeve { get; set; }
+
+        public Contato(string nome, string numeroTelefone, string apelido, int quantoMeDeve)
+        {
+            Nome = nome;
+            NumeroTelefone = numeroTelefone;
+            Apelido = apelido;
+            QuantoMeDeve = quantoMeDeve;
+        }
+    }
+}
+
