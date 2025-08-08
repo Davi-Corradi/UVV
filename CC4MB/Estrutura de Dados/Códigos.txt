@@ -8,10 +8,10 @@ int main()
 {
     int a,b;
     
-    printf("Digite o primeiro número: ");
+    printf("Digite o primeiro nÃºmero: ");
     scanf("%d", &a);
     
-    printf("Digite o segundo número: ");
+    printf("Digite o segundo nÃºmero: ");
     scanf("%d", &b);
     
     
@@ -35,10 +35,10 @@ int main()
 {
     int a,b,c;
     
-    printf("Digite o primeiro número: ");
+    printf("Digite o primeiro nÃºmero: ");
     scanf("%d", &a);
     
-    printf("Digite o segundo e o terceiro número: ");
+    printf("Digite o segundo e o terceiro nÃºmero: ");
     scanf("%d %d", &b, &c);
    
     printf("Resultado: %d", somar(a,b,c));
@@ -61,7 +61,7 @@ int main()
 {
     float a;
     
-    printf("Digite um número: ");
+    printf("Digite um nÃºmero: ");
     scanf("%f", &a);
     
     
@@ -86,7 +86,7 @@ int main()
 {
     float a;
     
-    printf("Digite um número: ");
+    printf("Digite um nÃºmero: ");
     scanf("%f", &a);
     
     
@@ -100,7 +100,7 @@ int main()
 
 
 
-5 – 
+5 â€“ 
 
 #include <stdio.h>
 
@@ -115,7 +115,7 @@ int main()
 {
     float a;
     
-    printf("Digite um número: ");
+    printf("Digite um nÃºmero: ");
     scanf("%f", &a);
     
     
@@ -137,14 +137,14 @@ int main()
 
 float maior(float x, float y){
     if(x > y){
-        printf("O número %.2f é maior que %.2f", x,y);
+        printf("O nÃºmero %.2f Ã© maior que %.2f", x,y);
     }
     return x;
 }
 
 float menor(float x, float y){
     if(x < y){
-        printf("O número %.2f é menor que %.2f", x,y);
+        printf("O nÃºmero %.2f Ã© menor que %.2f", x,y);
     }
     return y;
 }
@@ -168,10 +168,10 @@ int main(){
 
 int par(int x){
     if(x % 2 == 0){
-        printf("O número %d é par! ", x);
+        printf("O nÃºmero %d Ã© par! ", x);
     }
     else{
-        printf("O número %d não é par! ", x);
+        printf("O nÃºmero %d nÃ£o Ã© par! ", x);
     }
 }
 
@@ -179,7 +179,7 @@ int main()
 {
     int a;
     
-    printf("Digite um número: ");
+    printf("Digite um nÃºmero: ");
     scanf("%d", &a);
     
     par(a);
@@ -195,23 +195,23 @@ int main()
 
 float maior(float x, float y){
     if(x > y){
-        printf("O número %.2f é maior que %.2f", x,y);
+        printf("O nÃºmero %.2f Ã© maior que %.2f", x,y);
         return x;
     }
     
     else{
-        printf("O número %.2f é maior que %.2f", y,x);
+        printf("O nÃºmero %.2f Ã© maior que %.2f", y,x);
         return y;
     }
 }
 
 float menor(float x, float y){
     if(x < y){
-        printf("\nO número %.2f é menor que %.2f", x,y);
+        printf("\nO nÃºmero %.2f Ã© menor que %.2f", x,y);
         return x;
     }
      else{
-        printf("O número %.2f é menor que %.2f", y,x);
+        printf("O nÃºmero %.2f Ã© menor que %.2f", y,x);
         return y;
      }
 }
@@ -230,7 +230,7 @@ int main(){
     valMenor = menor(a, b);
     
     
-    printf("\nA diferença entre os valores é de: %f", diferenca(valMaior, valMenor));
+    printf("\nA diferenÃ§a entre os valores Ã© de: %f", diferenca(valMaior, valMenor));
     return 0;
 }
 
@@ -239,9 +239,9 @@ int main(){
 
 void menu() {
     printf("Soma - 1");
-    printf("\nSubtração - 2");
-    printf("\nMultiplicação - 3");
-    printf("\nDivisão - 4");
+    printf("\nSubtraÃ§Ã£o - 2");
+    printf("\nMultiplicaÃ§Ã£o - 3");
+    printf("\nDivisÃ£o - 4");
 }
 
 void somar(float x, float y) {
@@ -258,7 +258,7 @@ void mult(float x, float y) {
 
 void dividir(float x, float y) {
     if (y == 0) {
-        printf("Erro: divisão por zero!\n");
+        printf("Erro: divisÃ£o por zero!\n");
     } else {
         printf("Resultado: %.2f\n", x / y);
     }
@@ -270,15 +270,15 @@ int main() {
 
     while (1) {
         menu();
-        printf("\nSelecione a operação desejada: ");
+        printf("\nSelecione a operaÃ§Ã£o desejada: ");
         scanf("%d", &op);
 
         if (op < 1 || op > 4) {
-            printf("Opção inválida! Tente novamente.\n\n");
+            printf("OpÃ§Ã£o invÃ¡lida! Tente novamente.\n\n");
             continue; 
         }
 
-        printf("Digite os números: ");
+        printf("Digite os nÃºmeros: ");
         scanf("%f %f", &a, &b);
 
         if (op == 1) {
@@ -304,3 +304,128 @@ int main() {
 }
 
 
+10 - 
+
+
+#include <stdio.h>
+
+void aposentar(int idade, int ts){
+    if(idade >= 65){
+        printf("Pode se aposentar! ");
+    }
+    else if(ts >= 30){
+        printf("Pode se aposentar! ");
+    }
+    else if(idade >= 60 && ts == 25){
+        printf("Pode se aposentar! ");
+    }
+    else{
+        printf("NÃ£o pode se aposentar! ");
+    }
+}
+
+int main()
+{
+    int idade, ts;
+
+    printf("Digite a sua idade: ");
+    scanf("%d", &idade);
+    
+    printf("Digite o tempo de serviÃ§o: ");
+    scanf("%d", &ts);
+    
+    aposentar(idade, ts);
+    return 0;
+}
+
+
+
+11 - 
+
+
+#include <stdio.h>
+
+int main()
+{
+    for(int i = 1; i < 6; i++){
+        printf("%d\n", i*3);
+    }
+    return 0;
+}
+
+
+12 - 
+#include <stdio.h>
+
+int main()
+{
+
+    int i; 
+    
+    for(i = 1; i < 101; i++){
+        printf("% d", i);
+    }
+    
+    printf ("\n\n");
+    
+    i = 1;
+    while(i < 101){
+        printf("%d ", i);
+        i++;
+        
+    }
+    
+    i = 1;
+    
+    printf("\n\n");
+    
+    do{
+        printf("%d ", i);
+        i++;
+    }
+    while(i < 101);
+
+    return 0;
+}
+
+
+
+13 -  
+#include <stdio.h>
+
+int main()
+{
+
+    int i; 
+    
+    i = 10;
+    while(i <= 10 && i > 0){
+        printf("%d ", i);
+        i--;
+    }
+    
+    printf("FIM");
+
+    return 0;
+}
+
+
+14 - 
+
+#include <stdio.h>
+
+int main()
+{
+
+    int par; 
+    
+    printf("Digite um nÃºmero inteiro par: ");
+    scanf("%d" , &par);
+    
+    while(par >= 2){
+        printf("%d ", par);
+        par-= 2;
+    }
+    
+    return 0;
+}
