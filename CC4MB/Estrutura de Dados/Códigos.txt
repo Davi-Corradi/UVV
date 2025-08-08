@@ -419,13 +419,122 @@ int main()
 
     int par; 
     
+    do{ 
     printf("Digite um número inteiro par: ");
     scanf("%d" , &par);
     
-    while(par >= 2){
+    if(par % 2 != 0){
+        printf("O número nãó é par! Tente Novamente.\n");
+        }
+    } while(par % 2 != 0);
+    
+    
+    while(par >= 0){
         printf("%d ", par);
         par-= 2;
     }
     
     return 0;
 }
+
+
+
+15 -
+
+#include <stdio.h>
+
+int main()
+{
+
+    int maior = 0;
+    int menor;
+    int num;
+    
+    do{
+        printf("Digite um número. (negativo para parar): ");
+        scanf("%d", &num);
+        if(num >= 0){
+            if(num > maior){
+                maior = num;
+        
+            }
+        } else{
+            menor = num;
+        }
+    
+    } while(num >= 0);
+    
+    printf("Maior número: %d", maior);
+    printf("\nMenor número: %d", menor);
+    
+    
+    return 0;
+}
+
+
+
+16 -
+
+#include <stdio.h>
+
+int main()
+{
+    int vetor[6] = {1, 0 , 5, -2, -5, 7};
+    
+    for(int i = 0; i < 6; i++){
+        printf("Vetor[%d] = %d\n",i ,vetor[i]);
+    }
+    
+    vetor[4] = 100;
+    
+    printf("\n");
+    
+    printf("Vetor Atualizado: \n\n");
+    
+    for(int i = 0; i < 6; i++){
+        printf("Vetor[%d] = %d\n",i ,vetor[i]);
+    }
+    return 0;
+}
+
+
+
+
+17 - 
+
+#include <stdio.h>
+
+int main()
+{
+    int vetor[6];
+    // int *p = vetor
+    
+    for(int a = 0; a < 6; a++){
+        printf("Digite o %dº  número inteiro: ",a+ 1);
+        scanf("%d", &vetor[a]); // ou scanf("%d", p + a);
+    }
+    
+    printf("\nValores do Vetor: \n\n");
+    
+    for(int i = 0; i < 6; i++){
+        printf("Vetor[%d] = %d\n",i ,vetor[i]); // printf("Vetor[%d] = %d\n",i ,*(p + i));
+    }
+    
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
