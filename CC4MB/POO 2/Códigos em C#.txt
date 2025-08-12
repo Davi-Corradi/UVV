@@ -247,3 +247,81 @@ namespace Projeto
 }
 
 
+
+                EXERCÍCIO HERANÇA ANIMAL
+
+Classe SerVivo
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Projeto2
+{
+    internal class SerVivo
+    {
+        public int Tamanho { get; set; }
+
+        public void Nascer() => Console.WriteLine("Ser Vivo: Nascer()");
+        public void Crescer() => Console.WriteLine("Ser Vivo: Crescer()");
+        public void Morrer() => Console.WriteLine("Ser Vivo: Morrer()");
+    }
+}
+
+
+
+
+Classe Animal
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Channels;
+using System.Threading.Tasks;
+
+namespace Projeto2
+{
+    internal class Animal : SerVivo
+    {
+        public void Mover() => Console.WriteLine("Animal : Mover() ");
+        public void Respirar() => Console.WriteLine("Animal : Respirar() ");
+
+
+    }
+}
+
+
+
+Classe Main
+
+
+using Projeto2;
+
+namespace Projeto2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== SerVivo ===");
+            SerVivo sv = new();
+
+            sv.Nascer();
+            sv.Crescer();
+            sv.Morrer();
+
+            Console.WriteLine("=== Animal ===");
+            Animal animal = new Animal();
+            animal.Nascer();
+            animal.Crescer();
+
+        }
+    }
+}
+
+
+
