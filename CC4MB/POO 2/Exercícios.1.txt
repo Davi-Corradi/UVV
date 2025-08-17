@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 
@@ -14,10 +15,10 @@ namespace ConsoleApp2
 
             do
             {
-                Console.WriteLine("Digite sua idade: (Ou 0 para encerrar)");
+                Console.WriteLine("Digite sua idade: (Ou digite um número negativo ou 0 para encerrar)");
                 idade = int.Parse(Console.ReadLine());
 
-                if (idade == 0)
+                if (idade <= 0)
                     break;
 
                 Idades.Add(idade);
@@ -37,17 +38,17 @@ namespace ConsoleApp2
 
             double total = Idades.Count;
 
-            Console.WriteLine("\nFaixas et�rias:");
-            Console.WriteLine($"At� 15 anos: {a}");
-            Console.WriteLine($"16 a 30 anos: {b}");
-            Console.WriteLine($"31 a 45 anos: {c}");
-            Console.WriteLine($"46 a 60 anos: {d}");
+            Console.WriteLine("\nFaixas etárias:");
+            Console.WriteLine($"Até 15 anos: {a}");
+            Console.WriteLine($"Até 30 anos: {b}");
+            Console.WriteLine($"Até 45 anos: {c}");
+            Console.WriteLine($"Até 60 anos: {d}");
             Console.WriteLine($"Acima de 60 anos: {e}");
 
             if (total > 0)
             {
-                Console.WriteLine("\nPorcentagem de pessoas por cada faixa et�ria:");
-                Console.WriteLine($"At� 15 anos: {(a / total) * 100:F2}%");
+                Console.WriteLine("\nPorcentagem de pessoas por cada faixa etária:");
+                Console.WriteLine($"Até 15 anos: {(a / total) * 100:F2}%");
                 Console.WriteLine($"16 a 30 anos: {(b / total) * 100:F2}%");
                 Console.WriteLine($"31 a 45 anos: {(c / total) * 100:F2}%");
                 Console.WriteLine($"46 a 60 anos: {(d / total) * 100:F2}%");
