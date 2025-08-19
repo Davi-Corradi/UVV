@@ -212,6 +212,8 @@ namespace ConsoleApp
     {
         static void Main() {
             
+            Console.WriteLine("--- Supermercado Filho da Mãe ---");
+            
             double precoTotalCesta = 0;
             double precoTotalAlimentacao = 0;
             double precoTotalLimpeza = 0;
@@ -219,11 +221,11 @@ namespace ConsoleApp
             
             
             
-            const int PROD = 5;
+            const int PROD = 20;
             
             for(int i = 0; i < PROD; i++){
                 double preco;
-                char codigo = '';    
+                char codigo = ' ';    
                 bool entrada;
                 
                 do{
@@ -278,8 +280,8 @@ namespace ConsoleApp
                 }
             }
 
-            
-            Console.WriteLine("\n--- Relatório da Cesta Básica ---");
+           
+            Console.WriteLine("\n--- Visão Geral da Cesta Básica ---");
             Console.WriteLine($"Preço Total da Cesta: R${precoTotalCesta:F2}");
             Console.WriteLine($"Preço Total de Limpeza: R${precoTotalLimpeza:F2}");
             Console.WriteLine($"Preço Total de Alimentação: R${precoTotalAlimentacao:F2}");
@@ -288,4 +290,3 @@ namespace ConsoleApp
         }    
     }
 }
-
