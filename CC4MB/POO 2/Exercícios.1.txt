@@ -290,3 +290,80 @@ namespace ConsoleApp
         }    
     }
 }
+
+
+
+
+
+
+
+
+5 -
+
+using System;
+using System.Text;
+using System.Collections.Generic;
+
+namespace ConsoleApp{
+    
+    internal class Funcionario{
+        
+        public static List <Funcionario> Funcionarios = new List<Funcionario>();
+        
+        private int Matricula {get; set;}
+        private string Nome {get; set;}
+        private string cargoAtual {get; set;} 
+        private float salarioAtual {get; set;}
+        
+        public Funcionario(int matricula, string nome,string cargoAtual,float salarioAtual){
+            this.Matricula = matricula;
+            this.Nome = nome;
+            this.cargoAtual = cargoAtual;
+            this.salarioAtual = salarioAtual;
+        }
+               public static bool cadastrar(Funcionario f)
+        {
+            foreach (var func in Funcionarios)
+            {
+                if (func.Matricula == f.Matricula)
+                {
+                    return false; // Já existe funcionário com essa matrícula
+                }
+            }
+            Funcionarios.Add(f); // Adiciona só se não achou duplicata
+            return true;
+        }
+
+    }
+}
+
+
+
+
+
+Main
+
+
+
+using System;
+using System.Text;
+using System.Collections.Generic;
+
+
+namespace ConsoleApp
+{
+    
+    internal class Program 
+    {
+        static void Main() {
+            
+            Console.WriteLine("--- GESTÃO DE RH ---");
+            
+            Funcionario f1 = new Funcionario(123, "Davi", "Adm", 1000f);
+            bool sucesso = Funcionario.cadastrar(f1);
+            Console.WriteLine(sucesso);
+        }    
+    }
+}
+
+
