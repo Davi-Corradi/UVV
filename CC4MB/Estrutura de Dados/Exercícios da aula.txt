@@ -23,9 +23,12 @@ void imprimir(int n){
 } */
 
 int fatorial(int n){
-    int fat = n * (n-1);
-    printf("Fatorial de %d = %d", n, fat);
-    return fat * fat;
+     if(n == 0){
+         return 1;
+    }
+    else{
+       return n * fatorial(n-1);
+    }
 }
 
 int main()
@@ -33,7 +36,7 @@ int main()
     
     int n;
     
-    printf("Digite um número: ");
+    printf("Digite um nÃºmero: ");
     scanf("%d", &n);
     
     /* for(int i = n; i >= 0; i--){
@@ -49,12 +52,7 @@ int main()
         printf("Oi 1");
     } */
     
-    if(n == 0 || n == 1){
-        printf("Fatorial de %d = 1", n);
-    }
-    else{
-        fatorial(n);
-    }
-    
+   printf("Fatorial de %d = %d", n, fatorial(n));
+   
     return 0;
 }
