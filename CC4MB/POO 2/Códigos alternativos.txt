@@ -6,9 +6,7 @@
 
 
 using System;
-using System.Text;
 using System.Collections.Generic;
-
 
 namespace ConsoleApp
 {
@@ -16,36 +14,16 @@ namespace ConsoleApp
     {
         public static List<Funcionario> Funcionarios = new List<Funcionario>();
 
-
-        // Atributos privados
         private int Matricula;
         private string Nome;
         private string cargoAtual;
         private float salarioAtual;
-
 
         // Getters estilo Java
         public int getMatricula() { return Matricula; }
         public string getNome() { return Nome; }
         public string getCargoAtual() { return cargoAtual; }
         public float getSalarioAtual() { return salarioAtual; }
-
-
-        // Setters estilo Java (opcional, pode deixar comentado)
-        /*
-        public void setMatricula(int matricula) { this.Matricula = matricula; }
-        public void setNome(string nome) { this.Nome = nome; }
-        public void setCargoAtual(string cargoAtual) { this.cargoAtual = cargoAtual; }
-        public void setSalarioAtual(float salarioAtual) { this.salarioAtual = salarioAtual; }
-        */
-
-
-        // Propriedades estilo C#
-        public int MatriculaProp => Matricula;
-        public string NomeProp => Nome;
-        public string CargoAtualProp => cargoAtual;
-        public float SalarioAtualProp => salarioAtual;
-
 
         // Construtor
         public Funcionario(int matricula, string nome, string cargoAtual, float salarioAtual)
@@ -56,8 +34,7 @@ namespace ConsoleApp
             this.salarioAtual = salarioAtual;
         }
 
-
-        // Cadastro
+        // Cadastrar funcionário
         public static bool cadastrar(Funcionario f)
         {
             foreach (var func in Funcionarios)
@@ -72,23 +49,57 @@ namespace ConsoleApp
             return true;
         }
 
-
-        // Listagem
+        // Listar todos
         public static void listar()
         {
             Console.WriteLine("\nLista de funcionários cadastrados: \n");
 
+            foreach (var f in Funcionarios)
+            {
+                Console.WriteLine($"Nome: {f.getNome()} \nMatrícula: {f.getMatricula()} \nCargo: {f.getCargoAtual()} \nSalário: R$ {f.getSalarioAtual()}");
+                Console.WriteLine("------------------------------------");
+            }
+        }
+
+        // Consultar funcionário por matrícula (interação com usuário)
+        public static void consultar()
+        {
+            Console.Write("\nDigite a matrícula do funcionário que deseja consultar: ");
+            int matricula = int.Parse(Console.ReadLine());
+
+            Funcionario encontrado = null;
 
             foreach (var f in Funcionarios)
             {
-                // pode usar tanto getters quanto propriedades
-                Console.WriteLine($"Nome: {f.getNome()} \nMatrícula: {f.getMatricula()} \nCargo: {f.getCargoAtual()} \nSalário: R$ {f.getSalarioAtual()}");
+                if (f.Matricula == matricula)
+                {
+                    encontrado = f;
+                    break;
+                }
             }
+
+            if (encontrado != null)
+            {
+                Console.WriteLine($"\nFuncionário encontrado!");
+                Console.WriteLine($"Nome: {encontrado.getNome()}");
+                Console.WriteLine($"Matrícula: {encontrado.getMatricula()}");
+                Console.WriteLine($"Cargo: {encontrado.getCargoAtual()}");
+                Console.WriteLine($"Salário: R$ {encontrado.getSalarioAtual()}");
+            }
+            else
+            {
+                Console.WriteLine($"\nFuncionário com matrícula {matricula} não encontrado.");
+            }
+        }
+
+        // Atualizar salário (soma um valor ao salário atual)
+        public static void atualizarSalario(Funcionario f, float valor)
+        {
+            f.salarioAtual += valor;
+            Console.WriteLine($"\nSalário atualizado do funcionário {f.getNome()}: R$ {f.getSalarioAtual()}");
         }
     }
 }
-
-
 
 
 
@@ -112,47 +123,33 @@ Main
 
 using System;
 
-
 namespace ConsoleApp
 {
     internal class Program
     {
-        static void TentaCadastrar(Funcionario f)
-        {
-            // aqui mostro os dois estilos
-            if (Funcionario.cadastrar(f))
-            {
-                Console.WriteLine($"[C# prop] Funcionário {f.NomeProp} cadastrado com sucesso!");
-                Console.WriteLine($"[Java get] Funcionário {f.getNome()} cadastrado com sucesso!");
-            }
-            else
-            {
-                Console.WriteLine($"[C# prop] Falha ao cadastrar funcionário {f.NomeProp}: matrícula já existe.");
-                Console.WriteLine($"[Java get] Falha ao cadastrar funcionário {f.getNome()}: matrícula já existe.");
-            }
-        }
-
-
         static void Main()
         {
             Console.WriteLine("--- GESTÃO DE RH ---");
 
-
             // Cadastrando
-            TentaCadastrar(new Funcionario(123, "Davi", "Adm", 1000f));
-            TentaCadastrar(new Funcionario(1234, "Daniel", "TI", 10000f));
-            TentaCadastrar(new Funcionario(123, "Maria", "RH", 2000f));
+            Funcionario.cadastrar(new Funcionario(123, "Davi", "Adm", 1000f));
+            Funcionario.cadastrar(new Funcionario(1234, "Daniel", "TI", 10000f));
+            Funcionario.cadastrar(new Funcionario(321, "Maria", "RH", 2000f));
 
-
-            // Listagem
+            // Listagem inicial
             Funcionario.listar();
 
+            // Consultar funcionário
+            Funcionario.consultar();
 
-            // Exemplo extra: usando getter e propriedade separadamente
-            var f1 = new Funcionario(999, "Lucas", "Dev", 5000f);
-            Console.WriteLine($"\nExemplo com f1:");
-            Console.WriteLine($"Usando propriedade C#: {f1.NomeProp}");
-            Console.WriteLine($"Usando getter Java: {f1.getNome()}");
+            // Atualizar salário
+            var f = Funcionario.Funcionarios[0]; // pega o primeiro funcionário só para exemplo
+            Funcionario.atualizarSalario(f, 500f);
+
+            // Listar novamente para ver atualização
+            Funcionario.listar();
         }
     }
 }
+
+
