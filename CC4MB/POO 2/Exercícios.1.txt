@@ -299,7 +299,6 @@ namespace ConsoleApp
 
 
 5 -
-
 using System;
 using System.Text;
 using System.Collections.Generic;
@@ -310,10 +309,21 @@ namespace ConsoleApp{
         
         public static List <Funcionario> Funcionarios = new List<Funcionario>();
         
-        private int Matricula {get; set;}
+    /*  private int Matricula {get; set;}
         private string Nome {get; set;}
         private string cargoAtual {get; set;} 
-        private float salarioAtual {get; set;}
+        private float salarioAtual {get; set;} */
+        
+        private int Matricula; 
+        private string Nome; 
+        private string cargoAtual; 
+        private float salarioAtual;
+        
+        public int getMatricula() { return Matricula; }
+        public string getNome() { return Nome; }
+        public string getCargoAtual() { return cargoAtual; }
+        public float getSalarioAtual() { return salarioAtual; }
+    
         
         public Funcionario(int matricula, string nome,string cargoAtual,float salarioAtual){
             this.Matricula = matricula;
@@ -328,28 +338,31 @@ namespace ConsoleApp{
             {
                 if (func.Matricula == f.Matricula)
                 {
-                    Console.WriteLine($"\nFuncionário com matrícula {f.Matricula} já cadastrado!");
+                    Console.WriteLine($"\nFuncionário(a) com matrícula {f.Matricula} já cadastrado!");
                     return false; 
                 }
             }
             Funcionarios.Add(f); 
             return true;
         }
-        
-        /* static void TentaCadastrar(Funcionario f)
-        {
-            if (Funcionario.cadastrar(f))
-                Console.WriteLine($"Funcionário {f.Nome} cadastrado com sucesso!");
-            else
-                Console.WriteLine($"Falha ao cadastrar funcionário {f.Nome}: matrícula já existe.");
-        } */
-
+  
         public static void listar(){
             Console.WriteLine("\nLista de funcionários cadastrados: \n");
             
             foreach(var f in Funcionarios){
-                Console.WriteLine($"Nome: {f.Nome} \nMatrícula: {f.Matricula} \nCargo: {f.cargoAtual} \nSálario: R$ {f.salarioAtual},00 ");
+                Console.WriteLine($"Nome: {f.getNome()} \nMatrícula: {f.getMatricula()} \nCargo: {f.getCargoAtual()} \nSálario: R$ {f.getSalarioAtual()} ");
             }
+        }
+        
+         public static void consultar(){
+            Console.WriteLine("\nConsultando a lista de funcionários!");
+        }
+        
+        
+        public static void atualizarSalario(Funcionario f, float valor)
+        {
+            f.salarioAtual += valor;
+            Console.WriteLine($"\nSalário atualizado do funcionário {f.getNome()}: R$ {f.getSalarioAtual()}");
         }
     }
 }
@@ -359,8 +372,8 @@ namespace ConsoleApp{
 
 
 
-Main
 
+Main
 
 using System;
 using System.Text;
@@ -372,27 +385,35 @@ namespace ConsoleApp
     
     internal class Program 
     {
+        static void TentaCadastrar(Funcionario f)
+        {
+            if (Funcionario.cadastrar(f))
+                Console.WriteLine($"Funcionário(a) {f.getNome()} cadastrado com sucesso!");
+            else
+                Console.WriteLine($"Falha ao cadastrar funcionário(a) {f.getNome()}, a matrícula já existe.");
+        } 
+        
         static void Main() {
             
             Console.WriteLine("--- GESTÃO DE RH ---");
-            /*
+            
             TentaCadastrar(new Funcionario(123, "Davi", "Adm", 1000f));
             TentaCadastrar(new Funcionario(1234, "Daniel", "Gordo", 10000f));
-            TentaCadastrar(new Funcionario(123, "Maria", "RH", 2000f)); */
+            TentaCadastrar(new Funcionario(123, "Maria", "RH", 2000f)); 
             
-            Funcionario f1 = new Funcionario(123, "Davi", "Adm", 1000f);
-            Funcionario f2 = new Funcionario(1234, "Daniel", "Gordo", 10000f);
+            /* Funcionario f1 = new Funcionario(123, "Davi", "Adm", 1000f);
+            Funcionario f2 = new Funcionario(1234, "Daniel", "Gordo", 10000.55f); */
          
-            Funcionario.cadastrar(f2);
-            Funcionario.cadastrar(f2);
+            // Funcionario.cadastrar(f2);
+            // Funcionario.cadastrar(f2);
+            Funcionario.consultar();
             Funcionario.listar();
+            
+            var f = Funcionario.Funcionarios[0];
+            Funcionario.atualizarSalario(f, 500f);
             
             
         }    
     }
 }
-
-
-
-
 
