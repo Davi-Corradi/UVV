@@ -321,19 +321,36 @@ namespace ConsoleApp{
             this.cargoAtual = cargoAtual;
             this.salarioAtual = salarioAtual;
         }
-               public static bool cadastrar(Funcionario f)
+        
+        public static bool cadastrar(Funcionario f)
         {
             foreach (var func in Funcionarios)
             {
                 if (func.Matricula == f.Matricula)
                 {
-                    return false; // Já existe funcionário com essa matrícula
+                    Console.WriteLine($"\nFuncionário com matrícula {f.Matricula} já cadastrado!");
+                    return false; 
                 }
             }
-            Funcionarios.Add(f); // Adiciona só se não achou duplicata
+            Funcionarios.Add(f); 
             return true;
         }
+        
+        /* static void TentaCadastrar(Funcionario f)
+        {
+            if (Funcionario.cadastrar(f))
+                Console.WriteLine($"Funcionário {f.Nome} cadastrado com sucesso!");
+            else
+                Console.WriteLine($"Falha ao cadastrar funcionário {f.Nome}: matrícula já existe.");
+        } */
 
+        public static void listar(){
+            Console.WriteLine("\nLista de funcionários cadastrados: \n");
+            
+            foreach(var f in Funcionarios){
+                Console.WriteLine($"Nome: {f.Nome} \nMatrícula: {f.Matricula} \nCargo: {f.cargoAtual} \nSálario: R$ {f.salarioAtual},00 ");
+            }
+        }
     }
 }
 
@@ -341,8 +358,8 @@ namespace ConsoleApp{
 
 
 
-Main
 
+Main
 
 
 using System;
@@ -358,12 +375,24 @@ namespace ConsoleApp
         static void Main() {
             
             Console.WriteLine("--- GESTÃO DE RH ---");
+            /*
+            TentaCadastrar(new Funcionario(123, "Davi", "Adm", 1000f));
+            TentaCadastrar(new Funcionario(1234, "Daniel", "Gordo", 10000f));
+            TentaCadastrar(new Funcionario(123, "Maria", "RH", 2000f)); */
             
             Funcionario f1 = new Funcionario(123, "Davi", "Adm", 1000f);
-            bool sucesso = Funcionario.cadastrar(f1);
-            Console.WriteLine(sucesso);
+            Funcionario f2 = new Funcionario(1234, "Daniel", "Gordo", 10000f);
+         
+            Funcionario.cadastrar(f2);
+            Funcionario.cadastrar(f2);
+            Funcionario.listar();
+            
+            
         }    
     }
 }
+
+
+
 
 
