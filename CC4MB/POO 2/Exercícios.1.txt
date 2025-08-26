@@ -417,3 +417,149 @@ namespace ConsoleApp
     }
 }
 
+
+
+
+
+
+
+
+
+Classe Produto
+
+
+
+
+using System;
+using System.Text;
+using System.Collections.Generic;
+
+namespace ConsoleApp
+{
+    
+    internal class Produto
+    {
+    
+        
+       public string nome {get; private set;}
+       public double preco {get; private set;}
+       public int estoque {get; private set;}
+       
+       
+       public Produto(string nome, double preco,int estoque){
+           this.nome = nome;
+           this.preco = preco;
+           this.estoque = estoque;
+       }
+       
+       public override string ToString(){
+           return $"Produto: {nome}, Preço: {preco}, Quantidade: {estoque}";
+       }
+       
+       public void atualizar(string novoNome, double novoPreco, int novoEstoque) 
+            {
+                this.nome = novoNome; 
+                this.preco = novoPreco;
+                this.estoque = novoEstoque;
+            }
+    }
+}
+
+
+
+
+
+
+
+
+Classe Loja
+
+
+
+
+using System;
+using System.Text;
+using System.Collections.Generic;
+
+ namespace ConsoleApp
+{
+    
+    internal class Loja
+    {
+        private List<Produto> produtos = new List<Produto>();
+        
+        public string nome {get; private set;}
+
+        public Loja(string nome){
+            
+            this.nome = nome;
+        }
+        public void adicionar(Produto p){
+            produtos.Add(p);
+        }
+        
+        public double calcularTotal(){
+               double total = 0;
+               foreach(var p in produtos){
+                   total += p.preco * p.estoque;
+               }
+               return total;
+        }
+        
+        public List<Produto> getProdutos(){
+            return produtos;
+        }
+        
+        public void exibir(){
+            Console.WriteLine($"Loja: {nome} \n");
+            foreach(var p in produtos){
+                        Console.WriteLine(p);
+            }
+            Console.WriteLine($"\nTotal: {calcularTotal()}");
+       } 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+Main 
+
+
+
+
+using System;
+using System.Text;
+using System.Collections.Generic;
+
+
+namespace ConsoleApp
+{
+    internal class Program 
+    {
+        static void Main(string[] args)
+        {
+            Loja loja = new Loja("Loja do Mestre André");
+            
+            Produto p1 = new Produto("Camisa", 60.00, 30);
+            Produto p2 = new Produto("Celular", 1000.00, 20);
+            Produto p3 = new Produto("Caneta", 10.00, 50);
+            
+            loja.adicionar(p1);
+            loja.adicionar(p2);
+            loja.adicionar(p3);
+            
+            p3.atualizar("Borracha", 3.0, 50);
+            
+            loja.exibir();
+        }    
+    }
+}
+
+
