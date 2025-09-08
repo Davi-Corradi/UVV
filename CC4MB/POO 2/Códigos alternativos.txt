@@ -337,3 +337,36 @@ IMAGES
 
 </Project>
 
+
+
+
+
+
+
+DOCUMENTAÇÃO
+
+
+Para o projeto, foi escolhido o jogo 15 que se trata de um sistema de quiz. No entanto, o jogo não possuía, o que seria o básico de um quiz que seria perguntas e respostas, portanto isso foi mudado ao longo dos dias, para se aproximar mais de um sistema de quiz.
+
+O jogo em sua originalidade possuía imagens aleatórias, quadrantes de alternativas porém como não havia nenhuma pergunta, não pôde haver resposta, e os quadrantes com as respostas corretas eram sempre os mesmos.
+
+O sistema que foi implementado visando melhorias foi o seguinte:
+ 
+Criação de uma interface visual, com possibilidade de escolha.
+
+Criação de temas/categorias para serem selecionados.
+
+Criação de perguntas variadas de acordo com a categoria escolhida.
+
+As perguntas são divididas e são embaralhadas a cada recomeço de jogo.
+
+Criação de um sistema de pontuação.
+
+Alterações das imagens para serem minimamente conexas com os temas propostos. 
+
+	
+Sendo assim, a implementação desses novos atributos contribuiu para uma performance mais similar a um quiz.
+
+
+
+
