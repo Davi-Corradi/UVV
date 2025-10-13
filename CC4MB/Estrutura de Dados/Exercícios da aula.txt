@@ -204,7 +204,7 @@ int buscaOrdenada(int lista[], int numeroBuscado){
     return - 1;
 }  
 
-int buscaBinaria(int lista[], int numeroBuscado){
+int buscaLinear(int lista[], int numeroBuscado){
     for(int i = 0; i < 7; i++){
         if(lista[i] == numeroBuscado){
             return i;
@@ -312,5 +312,6 @@ int main(){
     
     return 0;
 }
+
 
 
