@@ -1,0 +1,27 @@
+﻿<Window x:Class="Quiz_Game_WPF_MOO_ICT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Quiz Game" Height="700" Width="500">
+    <Grid>
+        <!-- Painel do Menu -->
+        <StackPanel x:Name="menuPanel" Background="#FF4FC3F7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Height="680" Visibility="Visible">
+            <TextBlock Text="QUIZ" FontSize="48" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,20,0,20"/>
+            <ComboBox x:Name="categorySelector" FontSize="20" Width="250" Margin="0,0,0,20"/>
+            <Button Content="Iniciar" FontSize="20" Width="150" Height="40" Click="StartGameFromCategory" Background="#FF1976D2" Foreground="White" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <!-- Painel do Jogo -->
+        <StackPanel x:Name="myCanvas" Visibility="Collapsed" Background="#FFF" Margin="40" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+            <!-- Imagem da pergunta -->
+            <Image x:Name="qImage" Width="300" Height="200" Margin="0,0,0,20" Stretch="Uniform"/>
+            <!-- Texto da pergunta -->
+            <TextBlock x:Name="txtQuestion" FontSize="24" TextWrapping="Wrap" Margin="0,0,0,20" TextAlignment="Center"/>
+            <!-- Alternativas -->
+            <Button x:Name="ans1" Height="40" Margin="0,0,0,10" Click="checkAnswer"/>
+            <Button x:Name="ans2" Height="40" Margin="0,0,0,10" Click="checkAnswer"/>
+            <Button x:Name="ans3" Height="40" Margin="0,0,0,10" Click="checkAnswer"/>
+            <Button x:Name="ans4" Height="40" Margin="0,0,0,10" Click="checkAnswer"/>
+            <!-- Pontuação -->
+            <Label x:Name="scoreText" FontSize="18" Margin="0,20,0,0" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
