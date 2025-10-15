@@ -1,0 +1,25 @@
+SELECT lname
+FROM individual
+WHERE lname REGEXP '[^ry]$';
+
+SELECT d.name, count(e.emp_id) num_employees
+FROM department d,employee e
+WHERE d.dept_id = e.dept_id
+GROUP BY d.name;
+
+SELECT MIN(start_date) posse, dept_id 
+From employee
+group by dept_id; 
+
+SELECT MIN(start_date) posse, name
+From employee e, department d
+Where d.dept_id = e.dept_id
+Group by d.dept_id;
+
+SELECT fname, lname, data, employee.dept_id
+FROM employee, (SELECT dept_id, MIN(start_date) data
+FROM employee 
+group by dept_id) posse 
+Where posse.dept_id = employee.dept_id and posse.data = employee.start_date;
+
+

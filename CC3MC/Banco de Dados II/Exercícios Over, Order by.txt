@@ -1,0 +1,12 @@
+WITH cte AS (
+SElECT fname, lname, birth_date, city,
+RANK() OVER(PARTITION BY city ORDER BY birth_date) AS ranking
+FROM customer,individual
+WHERE customer.cust_id = individual.cust_id)
+SElECT fname, lname, birth_date FROM cte
+WHERE ranking  = 1;
+
+select name 
+from product
+order by substring_index(name, '', -1);
+
