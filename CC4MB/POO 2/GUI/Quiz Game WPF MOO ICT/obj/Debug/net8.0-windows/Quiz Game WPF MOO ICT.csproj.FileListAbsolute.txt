@@ -1,0 +1,85 @@
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.exe
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.deps.json
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.runtimeconfig.json
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.dll
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.pdb
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\App.g.cs
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT_MarkupCompile.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT_MarkupCompile.lref
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.g.resources
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz_Game_WPF_MOO_ICT.Properties.Resources.resources
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.csproj.GenerateResource.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.AssemblyInfoInputs.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.AssemblyInfo.cs
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.dll
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\refint\Quiz Game WPF MOO ICT.dll
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.pdb
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.genruntimeconfig.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\15\WPF-Multiple-Choice-Quiz-game-with-random-questions-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\ref\Quiz Game WPF MOO ICT.dll
+C:\DevC\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.exe
+C:\DevC\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.deps.json
+C:\DevC\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.runtimeconfig.json
+C:\DevC\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.dll
+C:\DevC\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.pdb
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\MainWindow.baml
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\App.g.cs
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT_MarkupCompile.cache
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.g.resources
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz_Game_WPF_MOO_ICT.Properties.Resources.resources
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.csproj.GenerateResource.cache
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.AssemblyInfoInputs.cache
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.AssemblyInfo.cs
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.csproj.CoreCompileInputs.cache
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.dll
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\refint\Quiz Game WPF MOO ICT.dll
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.pdb
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.genruntimeconfig.cache
+C:\DevC\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\ref\Quiz Game WPF MOO ICT.dll
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.exe
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.deps.json
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.runtimeconfig.json
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.dll
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.pdb
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT_MarkupCompile.cache
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.g.resources
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz_Game_WPF_MOO_ICT.Properties.Resources.resources
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.csproj.GenerateResource.cache
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.AssemblyInfoInputs.cache
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.AssemblyInfo.cs
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.csproj.CoreCompileInputs.cache
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.dll
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\refint\Quiz Game WPF MOO ICT.dll
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.pdb
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.genruntimeconfig.cache
+C:\Users\alunolab07\Downloads\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\ref\Quiz Game WPF MOO ICT.dll
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.exe
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.deps.json
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.runtimeconfig.json
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.dll
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\bin\Debug\net8.0-windows\Quiz Game WPF MOO ICT.pdb
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\MainWindow.baml
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\App.g.cs
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT_MarkupCompile.cache
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.g.resources
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz_Game_WPF_MOO_ICT.Properties.Resources.resources
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.csproj.GenerateResource.cache
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.AssemblyInfoInputs.cache
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.AssemblyInfo.cs
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.csproj.CoreCompileInputs.cache
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.dll
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\refint\Quiz Game WPF MOO ICT.dll
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.pdb
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\Quiz Game WPF MOO ICT.genruntimeconfig.cache
+C:\DevC\Jogo-POO2-main\Jogo-POO2-main\Quiz Game WPF MOO ICT\obj\Debug\net8.0-windows\ref\Quiz Game WPF MOO ICT.dll
