@@ -1,0 +1,16 @@
+from http.server import HTTPServer,  BaseHTTPRequestHandler
+
+
+class MyHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-type", "text/html") 
+        self.end_headers()
+        message = "<html><body><h1>Ola, mundo!</h1></body></html>"
+        self.wfile.write(message.encode())
+
+if __name__ == "__main__":
+    server_address = ('', 8000)
+    htppd = HTTPServer(server_address, MyHandler)
+    print("Servidor rodando em http://localhost:8000")
+    htppd.serve_forever()
