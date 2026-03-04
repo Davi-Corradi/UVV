@@ -1,0 +1,30 @@
+Resolução da Lista de exercícios:
+
+3.1 - C
+
+3.2 - E
+
+3.3 - B
+
+3.4 - A
+
+3.5 - D
+
+3.6 - B
+
+3.7 - D
+
+3.8 -  C
+
+3.9 -  E (Proxies constexts, são diferentes de proxies da web e proxies da factory)
+
+3.10 - C
+
+3.11 - B
+
+3.12 - A
+
+
+Considerações:
+
+Utilizar assincronia em aplicações web, evita o time out, e garante mais aplicabilidade pois roda em segundo plano, fora da sincronia da requisição
