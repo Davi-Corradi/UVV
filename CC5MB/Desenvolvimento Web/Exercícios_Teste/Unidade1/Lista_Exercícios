@@ -1,0 +1,29 @@
+Resolução da Lista de exercícios:
+
+1.1 - D
+
+1.2 - C
+
+1.3 - B
+
+1.4 - E
+
+1.5 - D
+
+1.6 - A
+
+1.7 - B
+
+1.8 - D 
+
+1.9 - C (Qualquer endereço diferente de '/', lança o erro 418)
+
+1.10 - B
+
+
+Considerações:
+
+O HTTP.Server e o WSGI são servidores exclusivamente para desenvolvimento didático e não para escala de produção
+O HTTP.Server não possui criptografia
+
+Os blueprints servem para gerenciar as rotas, endpoints e para personalizar os códigos
