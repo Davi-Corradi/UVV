@@ -1,0 +1,29 @@
+Resolução da Lista de exercícios:
+
+2.1 - E
+
+2.2 - C
+
+2.3 - B
+
+2.4 - A
+
+2.5 - E
+
+2.6 - D
+
+2.7 - A
+
+2.8 -  C
+
+2.9 - E
+
+2.10 - B
+
+
+Considerações:
+
+Para indicar pontos de entrada sem conflito utilizamos o próprio nome da aplicação FLASK_APP, ou utilizamos app.py como nome do arquivo
+
+O current_app serve para ir direto ao objeto criado na memória e acessá-lo diretamente, sem causar ambiguidades entre os acessos aos apps
+
