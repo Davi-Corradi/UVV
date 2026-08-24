@@ -55,8 +55,8 @@ public:
         return quantidade;
     }
 
-    double aplicarDesconto(double percentual) const {
-        return preco - (preco * (percentual / 100));
+    void aplicarDesconto(double percentual) {
+        preco = preco - (preco * (percentual / 100));
     }
     
     double calcularValorEstoque() const {
@@ -129,8 +129,8 @@ int main()
 
     std::cout << "\n";
 
-    std::cout << "Produto 1 - Valor total do estoque: " << produto.calcularValorEstoque() << "\n";
-    std::cout << "Produto 2 - Valor total do estoque: " << produto2.calcularValorEstoque() << "\n";
+    std::cout << "Produto 1 - Valor total do estoque (Baseado no desconto): " << produto.calcularValorEstoque() << "\n";
+    std::cout << "Produto 2 - Valor total do estoque (Baseado no desconto): " << produto2.calcularValorEstoque() << "\n";
 
     return 0;
 }
