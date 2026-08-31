@@ -15,3 +15,9 @@ Esta pasta contém os códigos desenvolvidos para os estudos da Unidade 02, foca
   * O cálculo do valor total do estoque permanece correto, baseando-se sempre no preço original de tabela.
   * Separação de variáveis no `main` (`desconto` e `desconto2`) para evitar sobrescrita de dados.
   * Criação da função auxiliar `exibirDadosComDesconto` para exibir o preço reduzido de forma visual apenas no momento da impressão.
+
+### 3. `conta_atualizada.cpp` (Versão Atualizada)
+* **Descrição:** Mais uma versão do sistema de produtos.
+* **Melhorias implementadas:**
+  * Atualização do compilador do C++ para a versão C++20.
+  * Inclusão da função **format** para formatar os preços da moeda com duas casas decimais. 
