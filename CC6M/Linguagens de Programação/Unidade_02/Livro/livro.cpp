@@ -8,7 +8,6 @@ private:
     int anoPublicacao{0};
 
 public:
-    // Construtor padrão
     Livro() : titulo{"Desconhecido"}, autor{"Desconhecido"}, anoPublicacao{0} {}
 
     // Construtor com parâmetros usando operador ternário
