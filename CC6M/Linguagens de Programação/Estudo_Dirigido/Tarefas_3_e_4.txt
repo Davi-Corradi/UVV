@@ -1,0 +1,41 @@
+tarefa03 :
+
+#include <iostream>
+
+int main()
+{
+    int cout = 10;
+    
+    std::cout<<"O valor da variavel eh: " << cout;
+
+    // 'cout' e 'cin' não fazem parte da sintaxe central, são somente objetos comuns definidos dentro do namespace.
+    // Por isso é possível reutilizar esses objetos no escopo local.
+    
+    return 0;
+}
+
+
+
+tarefa04 :
+
+#include <iostream>
+#include <limits>
+
+int main()
+{
+    int idade;
+    std::string nome_completo;
+    
+    std::cout<<"Digite sua idade: ";
+    std::cin >> idade;
+    
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');    
+    
+    std::cout<< "Digite seu nome completo: ";
+    std::getline(std::cin, nome_completo);
+    
+    std::cout<<"Idade: " << idade;
+    std::cout<<"\nNome completo: " << nome_completo;
+
+    return 0;
+}
