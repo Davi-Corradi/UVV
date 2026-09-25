@@ -1,0 +1,63 @@
+## Artigo explicativo para desenvolvimento do segundo entregável
+
+## 🎯 Sobre o Projeto
+Este projeto será desenvolvido como um protótipo de aplicativo (MVP) em **React Native** (com suporte à plataforma web e mobile via Expo/Snack). A ideia central da aplicação é 
+combater um problema recorrente em pesquisas e projetos acadêmicos: **a falta de referências adequadas ou o mau uso de livros por parte dos estudantes**. 
+
+O aplicativo atua como uma ferramenta prática de bolso que auxilia o acadêmico a:
+1. **Formatar referências bibliográficas de livros** instantaneamente no padrão ABNT.
+2. **Orientar sobre o uso correto de fontes**, diferenciando citações diretas, indiretas e prevenindo o plágio acadêmico.
+
+---
+
+## 🗺️ Fluxo de Telas e Navegação (Single-Page com Controle de Estado)
+
+Para manter o projeto leve e focado na entrega acadêmica sem a complexidade de bibliotecas pesadas de navegação (como React Navigation), a aplicação simula a transição entre telas utilizando **controle de estado local (`useState`)**. 
+
+O usuário interage com um fluxo intuitivo dividido nas seguintes seções:
+
+1. **Tela Inicial (Dashboard):**
+   * Apresenta a proposta do app e disponibiliza dois botões de acesso rápido para as funcionalidades principais: *"Gerar Referência ABNT"* e *"Guia de Citação e Bom Uso"*.
+2. **Tela do Gerador de Referências:**
+   * O usuário preenche campos de texto simples com os dados da obra (Autor, Título, Ano, Editora, Cidade).
+   * Ao clicar em "Gerar", o sistema processa os dados e exibe a referência formatada de maneira limpa, acompanhada de um botão para copiar o texto.
+3. **Tela do Guia de Boas Práticas (Educação):**
+   * Exibe cartões informativos com regras práticas sobre como citar livros corretamente em trabalhos acadêmicos (diferença entre citação direta e indireta), solucionando o problema do mau uso de referências.
+
+---
+
+## ⚙️ Lógica de Padronização (ABNT para Livros)
+
+A padronização das referências bibliográficas **não** utiliza inteligência artificial ou algoritmos complexos de Processamento de Linguagem Natural (PLN). 
+
+A lógica baseia-se em **concatenação de strings (template literals)**, onde os dados inseridos pelo usuário nos campos de entrada são dinamicamente encaixados em um molde estruturado conforme as normas vigentes:
+
+* **Exemplo de Lógica:**
+  ```javascript
+  const formatarABNT = (autor, titulo, cidade, editora, ano) => {
+    return `${autor.toUpperCase()}. **${titulo}**. ${cidade}: ${editora}, ${ano}.`;
+  };
+
+## 🛠️ Componentes e Funções Utilizados
+
+Para estruturar a interface e garantir a interatividade do aplicativo sem a necessidade de bibliotecas externas complexas, foram empregados os seguintes componentes nativos do React Native e funções em JavaScript:
+
+### 1. Componentes do React Native
+* **`View` e `SafeAreaView`**: Utilizados como containers estruturais para organizar o layout, garantir o espaçamento adequado e respeitar as áreas seguras da tela (evitando entalhes ou barras de status).
+* **`Text`**: Empregado para renderizar todos os textos da interface, como títulos, subtítulos, instruções, rótulos de formulário e o resultado final da referência formatada.
+* **`TextInput`**: Campos de entrada de texto interativos na tela do gerador, permitindo que o usuário digite os dados da obra (Nome do Autor, Título do Livro, Cidade, Editora e Ano).
+* **`TouchableOpacity`**: Utilizado para criar botões customizáveis e interativos (como os botões de navegação do menu inicial, o botão de "Gerar Referência" e o botão de "Copiar Texto").
+* **`ScrollView`**: Envolve as telas de formulário e de guias para garantir que o conteúdo seja totalmente rolável, evitando problemas de estouro de tela (*overflow*) quando o teclado virtual estiver aberto ou em telas menores.
+* **`FlatList`**: Responsável por renderizar de forma otimizada os cartões informativos na tela do *Guia de Boas Práticas* (citações diretas, indiretas e dicas de uso).
+
+### 2. Funções e Lógicas em JavaScript
+* **Gerenciamento de Estado (`useState`)**:
+  * Utilizado para controlar a navegação em página única (*single-page*), alternando qual tela/componente é exibido no momento com base na escolha do usuário (ex: `telaAtual` alternando entre `'home'`, `'gerador'` e `'guia'`).
+  * Armazena os valores digitados nos inputs do formulário (`autor`, `titulo`, `cidade`, `editora`, `ano`) e o texto final gerado.
+* **Função de Formatação ABNT (`formatarABNT`)**:
+  * Uma função pura em JavaScript que recebe os parâmetros informados pelo usuário, aplica transformações simples (como transformar o nome do autor em letras maiúsculas via `.toUpperCase()`) 
+    e os une em uma string única estruturada de acordo com o padrão bibliográfico de livros da ABNT.
+* **Função de Cópia para Área de Transferência (`Clipboard`)**:
+  * Acionada pelo botão de cópia na tela de resultado, utiliza a API do Expo (`expo-clipboard`) para transferir instantaneamente a referência formatada para a memória do dispositivo, 
+    facilitando que o estudante cole o texto diretamente no seu editor de texto ou gerenciador de referências.
+
