@@ -1,0 +1,6 @@
+				Respostas da lista de exercícios
+				    (Unidade 3 - Página 12)
+
+3.1 a) O parâmetro formal é o valor passado na assinatura da função, exemplo em uma função qualquer "double calcular(double valor)", a variável 'valor' seria o parâmetro formal, enquanto os argumentos são definidos formalmente e na prática como os valores passados entre os parênteses do parâmetro. No exemplo do código "distancia_euclidiana", não existem parâmetros formais, enquanto os argumentos são os próprios valores passados para os parênteses das funções da biblioteca cmath.
+
+b) Quando a função é chamada ela entra na stack frame, e após o cálculo feito pelo processador, retorna o valor calculado pela função, e consequentemente desaloca a função da stack frame.
