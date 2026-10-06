@@ -10,21 +10,23 @@ b) Quando uma função é chamada, um stack frame é criado e empilhado na call 
 
 3.2
 
-codigo_corrigido.cpp
+Arquivo: codigo_corrigido.cpp
 
 #include <iostream>
 #include <cmath>
 
-double calcularMedia(double a, double b) {
-    double media =  (a + b) / 2;
+double calcularMedia(double a, double b)
+{
+    double media = (a + b) / 2;
     return media;
 }
 
-int main() {
+int main()
+{
     double x = 10.0, y = 6.0;
     double resultado = calcularMedia(x, y);
 
-    std::cout << "Raiz da media: " << std::sqrt(resultado) << std::endl;    
+    std::cout << "Raiz da media: " << std::sqrt(resultado) << std::endl;
     return 0;
 }
 
