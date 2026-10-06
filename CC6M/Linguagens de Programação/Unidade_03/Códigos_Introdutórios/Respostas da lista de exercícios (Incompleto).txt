@@ -3,4 +3,4 @@
 
 3.1 a) O parâmetro formal é o valor passado na assinatura da função, exemplo em uma função qualquer "double calcular(double valor)", a variável 'valor' seria o parâmetro formal, enquanto os argumentos são definidos formalmente e na prática como os valores passados entre os parênteses do parâmetro. No exemplo do código "distancia_euclidiana", não existem parâmetros formais, enquanto os argumentos são os próprios valores passados para os parênteses das funções da biblioteca cmath.
 
-b) Quando a função é chamada ela entra na stack frame, e após o cálculo feito pelo processador, retorna o valor calculado pela função, e consequentemente desaloca a função da stack frame.
+b) Quando uma função é chamada, um stack frame é criado e empilhado na call stack, guardando parâmetros, variáveis locais e o endereço de retorno. Ao atingir o return, o valor de retorno é entregue ao chamador (normalmente via registrador), o stack frame é desempilhado e o endereço de retorno é usado para que a execução continue na instrução seguinte à chamada.
