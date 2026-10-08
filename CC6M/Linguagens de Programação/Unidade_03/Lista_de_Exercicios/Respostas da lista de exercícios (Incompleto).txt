@@ -1,5 +1,5 @@
 													Respostas da lista de exercícios
-				    									(Unidade 3 - Página 12)
+				    								  (Unidade 3 - Página 12 a 16)
 
 3.1 a) O parâmetro formal é o valor passado na assinatura da função, exemplo em uma função qualquer "double calcular(double valor)", a variável 'valor' seria o parâmetro formal, enquanto
 os argumentos são definidos formalmente e na prática como os valores passados entre os parênteses do parâmetro. No exemplo do código "distancia_euclidiana", não existem parâmetros formais, e 
@@ -8,9 +8,10 @@ os argumentos são os próprios valores passados para os parênteses das funçõ
 b) Quando uma função é chamada, um stack frame é criado e empilhado na call stack, guardando parâmetros, variáveis locais e o endereço de retorno. Ao atingir o return, o valor de retorno 
 é entregue ao chamador (normalmente via registrador), o stack frame é desempilhado e o endereço de retorno é usado para que a execução continue na instrução seguinte à chamada.
 
+
 3.2
 
-Arquivo: codigo_corrigido.cpp
+Arquivo: "codigo_corrigido.cpp"
 
 #include <iostream>
 #include <cmath>
@@ -31,5 +32,57 @@ int main()
 }
 
 Explicação: O erro mais visível é o erro de tipagem (type error) da função "calcularMedia", que foi atribuído inicialmente como "void" e declarou um retorno "double". Para corrigir, basta 
-trocar o nome "void" por "double". O outro possível erro, se deve a compilação no sistema Linux, porém no Windows o único erro é o de tipagem mesmo.
+trocar o nome "void" por "double". O outro erro é a chamada da função calcularMedia na main, já que o retorno está como void ela não pode retornar valores na main.
 
+
+3.3
+
+Arquivo: "calcular_altura.cpp"
+
+#include <iostream>
+#include <cmath>
+
+const double PI = 3.141592653589793;
+const int DISTANCIA = 50;
+const double ANGULO = 30.00;
+
+double grausParaRadianos(double graus)
+{
+    return graus * (PI / 180);
+}
+
+int main()
+{
+    double anguloRadianos = grausParaRadianos(ANGULO);
+    double altura = DISTANCIA * std::tan(anguloRadianos);
+
+    std::cout << "A altura eh de: " << altura << " metros\n";
+    return 0;
+}
+
+
+3.4
+
+Arquivo: "calcular_distancia.cpp"
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    double x1, y1, x2, y2;
+
+    std::cout << "Digite o primeiro par ordenado (x1, y1) (Nao use virgula): ";
+    std::cin >> x1 >> y1;
+    
+    std::cout << "Digite o segundo par ordenado (x2, y2) (Nao use virgula): ";
+    std::cin >> x2 >> y2;
+
+    double distancia = std::hypot(x2 - x1, y2 - y1);
+
+    std::cout << "\nA distancia euclidiana entre os dois pontos eh de: " << distancia << " metros";
+    std::cout << "\nValor arredondado para cima: " << std::ceil(distancia); 
+    std::cout << "\nValor arredondado para baixo: " << std::floor(distancia); 
+
+    return 0;
+}
