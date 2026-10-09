@@ -18,7 +18,7 @@ Arquivo: "codigo_corrigido.cpp"
 
 double calcularMedia(double a, double b)
 {
-    double media = (a + b) / 2;
+    double media = (a + b) / 2.0;
     return media;
 }
 
