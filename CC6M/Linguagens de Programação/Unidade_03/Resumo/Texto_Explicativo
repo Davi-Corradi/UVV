@@ -1,0 +1,28 @@
+Resumo dos pontos principais da unidade 3:
+
+Abstração Procedural e Modularização de Códigos:
+
+
+Erros comuns em protótipos de funções:
+
+#include <iostream>
+
+int soma(int a, int b);
+double soma(double c, double d);
+
+int main()
+{
+    std::cout<<"A soma eh: " << soma(5, 8);
+    std::cout<<"\nA soma eh: " << soma(5.5, 8.5);
+    std::cout<<"\nA soma eh: " << soma(5, 8.5); // Chamada ambigua (error: call of overloaded ‘soma(int, double)’ is ambiguous)
+
+    return 0;
+}
+
+int soma(int a, int b){
+    return a + b;
+}
+
+double soma(double c, double d){
+    return c + d;
+}
