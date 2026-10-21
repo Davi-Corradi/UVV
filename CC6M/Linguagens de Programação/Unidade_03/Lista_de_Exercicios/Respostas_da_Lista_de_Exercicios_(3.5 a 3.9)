@@ -8,4 +8,31 @@ de função é um outro tipo de mecanismo do C++, que visa somente o nome da fun
 b) A declaração prévia de um protótipo de função, fornece a interface da função ao compilador sem precisar verificar previamente o seu escopo/definição, dessa forma, faz com que o compilador cheque em tempo de compilação toda a declaração 
 daquela função e faça a verificação de tipos (type checking). O único problema possível, seria se a função não tivesse um escopo definido, o que poderia acarretar em um erro de ligação (linker).
 
-			
+3.6
+
+Arquivo: "exemplo_de_prototipo.cpp"
+
+#include <iostream>
+
+// Prototipo da funcao (declaracao)
+
+int obterMaior(int a, int b);
+
+int main(){
+    int x = 15;
+    int y = 20;
+
+    // Chamada valida: o compilador ja conhece o prototipo de obterMaior
+
+    int maior = obterMaior(x, y);
+
+    std::cout << "O maior valor eh: " << maior;
+
+    return 0;
+}
+
+// Definicao da funcao (implementacao)
+
+int obterMaior(int a, int b){
+    return (a > b) ? a : b;
+}	
