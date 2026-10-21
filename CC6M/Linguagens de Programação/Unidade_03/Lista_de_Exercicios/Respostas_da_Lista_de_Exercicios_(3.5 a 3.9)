@@ -10,29 +10,4 @@ daquela função e faça a verificação de tipos (type checking). O único prob
 
 3.6
 
-Arquivo: "exemplo_de_prototipo.cpp"
 
-#include <iostream>
-
-// Prototipo da funcao (declaracao)
-
-int obterMaior(int a, int b);
-
-int main(){
-    int x = 15;
-    int y = 20;
-
-    // Chamada valida: o compilador ja conhece o prototipo de obterMaior
-
-    int maior = obterMaior(x, y);
-
-    std::cout << "O maior valor eh: " << maior;
-
-    return 0;
-}
-
-// Definicao da funcao (implementacao)
-
-int obterMaior(int a, int b){
-    return (a > b) ? a : b;
-}	
