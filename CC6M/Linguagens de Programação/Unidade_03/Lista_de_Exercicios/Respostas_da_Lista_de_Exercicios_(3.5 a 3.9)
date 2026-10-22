@@ -10,4 +10,6 @@ daquela função e faça a verificação de tipos (type checking). O único prob
 
 3.6
 
+a) Por que ao tentar utilizar a sobrecarga de funções na função calcularMedia, a assinatura da função ficou igual em ambas as funções, e como a assinatura precisa ser única para o compilador, o código gerou um erro de compilação.
 
+b) O conceito de assinatura define que os nomes e a lista de parâmetros devem ser identificadores únicos em uma função, e o mecanismo de sobrecarga de funções permite que o nome seja igual, desde que a lista de parâmetros seja diferente, independente do tipo de retorno.
