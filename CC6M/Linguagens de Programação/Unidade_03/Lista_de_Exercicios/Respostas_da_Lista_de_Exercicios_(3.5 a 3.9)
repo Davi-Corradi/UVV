@@ -27,5 +27,30 @@ Na chamada 3, os argumentos são true e 12, o true é convertido para o seu valo
 
 3.8
 
-O C++ utilizou os antigos arquivos de cabeçalhos apenas trocando o sufixo .h pelo prefixo c, ou seja, os antigos cabeçalhos math.h e stdlib.h, viraram respectivamente cmath e cstdlib.
+a) O C++ utilizou os antigos arquivos de cabeçalhos apenas trocando o sufixo .h pelo prefixo c, ou seja, os antigos cabeçalhos math.h e stdlib.h, viraram respectivamente cmath e cstdlib.
 
+b) Por que dependendo de como um outro compilador ou sistema operacional organiza suas inclusões internas, isso pode gerar um erro de portabilidade ou compatibilidade difícil de rastrear. A prática de omitir inclusões explícitas pode
+gerar erros de compilação em outros ambientes.
+
+3.9
+
+#include <iostream>
+
+double converterCelsiusParaFahrenheit(double temperatura);
+
+void exibirRelatorioTemperatura(double relatorio);
+
+int main()
+{
+
+    return 0;
+}
+
+double converterCelsiusParaFahrenheit(double celsius)
+{
+    return celsius * (9.0 / 5.0) + 32.0;
+}
+
+double exibirRelatoriaTemperatura()
+{
+}
