@@ -15,4 +15,17 @@ a) Por que ao tentar utilizar a sobrecarga de funções na função calcularMedi
 b) O conceito de assinatura define que os nomes e a lista de parâmetros devem ser identificadores únicos em uma função, e o mecanismo de sobrecarga de funções permite que o nome seja igual, desde que a lista de parâmetros seja diferente, 
 independente do tipo de retorno.
 
+3.7
+
+Na chamada 1, os argumentos passados são 10.8 e 4, ou seja, um double e um int. Como a função tem como lista de parâmetros um int e depois um double, o primeiro argumento (10.8) sofre uma truncamento de valores para o valor 10, que é a parte
+inteira do valor 10.8. Já o valor 4, como teria que ser originalmente um double, definido pela lista de parâmetros da função, ele sofre uma promoção para o valor 4.0.
+
+Na chamada 2, como os argumentos foram um char 'A' e um float '3.14', o char é promovido para o seu valor correspondente a tabela ASCII, ou seja, 65, e o float é promovido para o double 3.14.
+
+Na chamada 3, os argumentos são true e 12, o true é convertido para o seu valor lógico 1, e o inteiro 12 é promovido, virando 12.0.
+
+
+3.8
+
+O C++ utilizou os antigos arquivos de cabeçalhos apenas trocando o sufixo .h pelo prefixo c, ou seja, os antigos cabeçalhos math.h e stdlib.h, viraram respectivamente cmath e cstdlib.
 
