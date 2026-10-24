@@ -36,12 +36,19 @@ gerar erros de compilação em outros ambientes.
 
 #include <iostream>
 
-double converterCelsiusParaFahrenheit(double temperatura);
+double converterCelsiusParaFahrenheit(double celsius);
 
-void exibirRelatorioTemperatura(double relatorio);
+void exibirRelatorioTemperatura(double celsius);
 
 int main()
 {
+    double temperatura;
+
+    std::cout << "\n=== CONVERSOR DE TEMPERATURA - CELSIUS PARA FAHRENHEIT ===\n\n";
+    std::cout << "Digite a temperatura a ser convertida: ";
+    std::cin >> temperatura;
+
+    exibirRelatorioTemperatura(temperatura);
 
     return 0;
 }
@@ -51,6 +58,10 @@ double converterCelsiusParaFahrenheit(double celsius)
     return celsius * (9.0 / 5.0) + 32.0;
 }
 
-double exibirRelatoriaTemperatura()
+void exibirRelatorioTemperatura(double celsius)
 {
+    double temperatura_convertida = converterCelsiusParaFahrenheit(celsius);
+    std::cout << "\nA temperatura em Celsius eh: " << celsius << " Graus Celsius";
+    std::cout << "\nA temperatura em Fahrenheit eh: " << temperatura_convertida << " Graus Fahrenheit";
+}
 }
