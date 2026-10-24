@@ -3,7 +3,8 @@
 
 3.5 a) O protótipo de função é um mecanismo da linguagem C++ que utiliza da declaração completa da função, ou seja, nome, tipo de retorno, tipos de parâmetros e os nomes dos parâmetros, onde somente os nomes dos parâmetros 
 que são opcionais, o resto dos componentes é obrigatório para o compilador interpretar que existe uma função e não gerar um erro de compilação. Exemplo de um protótipo de função, double calcular(int a, double b). A assinatura 
-de função é um outro tipo de mecanismo do C++, que visa somente o nome da função e a sequência ordenada dos tipos de parâmetros, exemplo calcular(int, double), não se importando com o seu tipo de retorno e nem os nomes dos seus parâmetros.
+de função é um outro tipo de mecanismo do C++, que visa somente o nome da função e a sequência ordenada dos tipos de parâmetros, não se importando com o seu tipo de retorno e nem os nomes dos seus parâmetros.Exemplo
+de assinatura de função calcular(int, double).
 
 b) A declaração prévia de um protótipo de função, fornece a interface da função ao compilador sem precisar verificar previamente o seu escopo/definição, dessa forma, faz com que o compilador cheque em tempo de compilação toda a declaração 
 daquela função e faça a verificação de tipos (type checking). O único problema possível, seria se a função não tivesse um escopo definido, o que poderia acarretar em um erro de ligação (linker).
