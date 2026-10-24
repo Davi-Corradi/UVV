@@ -1,23 +1,22 @@
-# Unidade 02 - Linguagens de Programação (UVV - CC6M)
+# 🚀 Unidade 2: Introdução a Classes, Objetos e POO (C++)
 
-Esta pasta contém os códigos desenvolvidos para os estudos da Unidade 02, focados em Programação Orientada a Objetos em C++.
+Este diretório contém os códigos e exercícios práticos focados na transição da programação estruturada para o paradigma Orientado a Objetos (POO) em C++. O objetivo principal é a modelagem de entidades do mundo real com segurança de estado e arquitetura modular.
 
-## 📁 Arquivos na Pasta
+## 📌 Principais Conceitos Aplicados
+* **Classes e Objetos:** Criação de moldes (classes) e instanciação na memória (objetos).
+* **Encapsulamento:** Proteção do estado interno utilizando membros `private` e exposição controlada via métodos `public` (Getters e Setters).
+* **Construtores:** Inicialização segura de objetos utilizando construtores padrão, parametrizados e Listas de Inicialização de Membros.
+* **Modularização:** Separação de responsabilidades isolando a interface (arquivos `.h` / `.hpp`) da implementação (arquivos `.cpp`).
+* **Tipagem Moderna:** Substituição de arrays de caracteres (C-style strings) pela classe segura `std::string`.
 
-### 1. `conta.cpp` (Versão Inicial)
-* **Descrição:** Primeira versão do sistema de produtos. 
-* **Características:** O método `aplicarDesconto` altera permanentemente o preço salvo na memória (sem o modificador `const`), o que fazia o cálculo do estoque refletir diretamente o valor com desconto.
+## 📂 Exercícios e Implementações
+* `Produto` - Implementação de encapsulamento, aplicação de descontos e validação de regras de negócio (preço > 0).
+* `Livro` - Uso de múltiplos construtores e lista de inicialização.
+* `ContaBanco` - Estruturação modular separando interface e implementação de uma conta bancária.
 
-### 2. `teste.cpp` (Versão Atualizada / Refatorada)
-* **Descrição:** Versão aprimorada e corrigida do código.
-* **Melhorias implementadas:**
-  * Uso do modificador `const` no método `aplicarDesconto` para proteger a integridade do preço original na memória.
-  * O cálculo do valor total do estoque permanece correto, baseando-se sempre no preço original de tabela.
-  * Separação de variáveis no `main` (`desconto` e `desconto2`) para evitar sobrescrita de dados.
-  * Criação da função auxiliar `exibirDadosComDesconto` para exibir o preço reduzido de forma visual apenas no momento da impressão.
+---
 
-### 3. `conta_atualizada.cpp` (Versão Atualizada)
-* **Descrição:** Mais uma versão do sistema de produtos.
-* **Melhorias implementadas:**
-  * Atualização do compilador do C++ para a versão C++20.
-  * Inclusão da função **format** para formatar os preços da moeda com duas casas decimais. 
+## 📖 Resumo Teórico Completo
+Para revisar a teoria detalhada, a mecânica da linguagem e os pontos de atenção para provas (erros comuns, restrições e trade-offs entre paradigmas), acesse o documento completo na pasta de resumos:
+
+👉 **[Ler Resumo Detalhado da Unidade 2](../Resumo/Texto_Explicativo/Resumo_Unidade_02.md)**
