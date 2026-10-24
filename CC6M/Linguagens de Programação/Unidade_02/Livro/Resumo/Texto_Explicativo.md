@@ -97,7 +97,3 @@ A linguagem permite resolver o mesmo problema sob diferentes óticas, impactando
 
 
 * **Inclusões Implícitas:** Nunca dependa de um cabeçalho carregando outro em segundo plano. Se o arquivo usa fluxo de saída e strings, ele deve incluir `#include <iostream>` e `#include <string>` explicitamente.
-
-
-
-Verifique se a densidade técnica e os tópicos abordados estão alinhados com o que você visualiza para a sua pasta `Resumo -> Texto_Explicativo`. Assim que você aprovar a estrutura, gero o README introdutório para o repositório com o direcionamento correto e seguimos para a refatoração do sistema bancário.
