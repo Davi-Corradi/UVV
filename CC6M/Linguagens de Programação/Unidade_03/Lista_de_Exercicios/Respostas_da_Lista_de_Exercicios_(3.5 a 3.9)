@@ -64,4 +64,3 @@ void exibirRelatorioTemperatura(double celsius)
     std::cout << "\nA temperatura em Celsius eh: " << celsius << " Graus Celsius";
     std::cout << "\nA temperatura em Fahrenheit eh: " << temperatura_convertida << " Graus Fahrenheit";
 }
-}
