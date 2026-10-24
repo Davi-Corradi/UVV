@@ -46,7 +46,7 @@ Como o compilador C++ lê os arquivos sequencialmente de cima para baixo, as fun
 
 A **assinatura da função** é composta unicamente pelo **nome da função** somado à **sequência exata dos tipos dos seus parâmetros**. O tipo de retorno e os nomes das variáveis **não** fazem parte da assinatura. Essa regra define a **sobrecarga de funções**, permitindo que funções tenham o mesmo nome, desde que suas listas de parâmetros sejam exclusivas.
 
-**O seu código de exemplo e a Ambiguidade:**
+**Código de exemplo e Ambiguidade:**
 
 ```cpp
 #include <iostream>
