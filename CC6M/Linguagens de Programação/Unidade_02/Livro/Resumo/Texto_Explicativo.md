@@ -1,6 +1,103 @@
-Resumo Completo da Unidade 2: Introdução à Orientação a Objetos em C++1. Transição de Paradigma: Classes e ObjetosA Programação Orientada a Objetos (POO) substitui a abordagem estruturada (funções e variáveis soltas) pelo agrupamento lógico de estado (dados) e comportamento (operações) em entidades chamadas objetos.   Classe: É a especificação (a planta arquitetônica ou molde) que define a estrutura de uma categoria de entidades.   Objeto: É a instância concreta criada na memória durante a execução do programa com base na classe (a casa construída a partir da planta).   2. Encapsulamento e Ocultamento de DadosO encapsulamento é o mecanismo que protege a integridade do objeto, impedindo que o código externo altere seus dados diretamente de forma inválida (como definir um preço negativo).   Estado Interno (private): Atributos que representam a situação do objeto. Devem ser ocultos e manipulados apenas pela própria classe.   Interface Pública (public): Conjunto de funções-membro (métodos) disponibilizadas para o mundo externo interagir com o objeto.   Getters e Setters: Funções de acesso (get) e modificação (set). A grande vantagem do set é a capacidade de realizar validação de estado antes de permitir que o atributo seja alterado na memória.   3. Construtores e Inicialização de MembrosO construtor é uma função-membro especial (possui o exato nome da classe e não tem tipo de retorno) invocada automaticamente no instante em que o objeto é instanciado, garantindo que ele nasça em um estado válido.   Construtor Padrão: Não exige argumentos. Se não for definido pelo programador, o compilador pode gerar um implicitamente.   Lista de Inicialização de Membros: É a forma idiomática e otimizada do C++ para inicializar atributos antes mesmo do corpo do construtor ser executado (sintaxe: : atributo{valor}).   Ordem de Inicialização: Os atributos são sempre inicializados na exata ordem em que foram declarados na classe, e não na ordem em que aparecem na lista do construtor.   4. Separação de Interface e ImplementaçãoPara projetos escaláveis, o C++ divide as classes em dois arquivos distintos:   Arquivo de Cabeçalho (.h ou .hpp): Funciona como um contrato. Contém apenas a declaração da classe, seus atributos e as assinaturas de seus métodos. Exige o uso de guardas de inclusão (#ifndef, #define, #endif) ou #pragma once para evitar redefinições acidentais caso seja incluído múltiplas vezes.   Arquivo de Implementação (.cpp): Contém a lógica dos métodos. Utiliza o operador de resolução de escopo (::) para atrelar a implementação à classe (ex: void ContaBanco::setNome(string nome)).   5. A Classe std::stringDiferente de int ou double (tipos fundamentais do hardware), std::string é uma classe da Biblioteca Padrão. Ela abstrai a complexidade do gerenciamento de texto, permitindo acesso por índice (iniciado em 0) e operações como concatenação via operador +.   6. Matriz de Trade-offs: Paradigmas de ProgramaçãoO C++ é multiparadigma, permitindo resolver o mesmo problema sob diferentes óticas:   Imperativo: Foco no "como fazer". Alta dependência de variáveis mutáveis, laços manuais e controle de hardware.Orientado a Objetos: Foco em entidades do domínio. Agrupa estado e comportamento, reduzindo o acoplamento global.Funcional (C++20 Ranges): Foco no "o que fazer". Prioriza a imutabilidade, eliminando efeitos colaterais e facilitando o processamento paralelo seguro (thread-safe).🛑 Pontos de Atenção para ProvasOmitir o Ponto e Vírgula da Classe: O fechamento de uma classe exige ; após a última chave };. Esquecer isso gera erros de compilação em cascata.   Atribuição vs Inicialização no Construtor: Injetar valores dentro do bloco {} do construtor é atribuição. A verdadeira inicialização só ocorre usando a lista de inicialização de membros ou a inicialização direta na declaração.   Strings C-Style: Evite vetores de caracteres (char[]) para manipular texto cotidiano; use sempre std::string encapsulado.   Sobrecarga de Construtores: Uma classe pode ter vários construtores, desde que as listas de parâmetros sejam exclusivas (regras de assinatura de função).   Adendo para o topo do seu README.md atual da Unidade 2Markdown# Unidade 2 - Introdução à Orientação a Objetos
+## Resumo Detalhado: Unidade 2 - Introdução a Classes, Objetos e POO
 
-> **📖 Nota Teórica:** Para um aprofundamento nos conceitos arquiteturais desta unidade (Classes, Objetos, Encapsulamento, Construtores e Separação de Arquivos .h/.cpp), consulte o [Resumo Detalhado da Unidade 2](Resumo/Texto_Explicativo/Resumo_Unidade_02.md).
+O foco desta unidade é a transição da programação estruturada para o paradigma Orientado a Objetos (POO), modelando entidades do mundo real com forte ênfase em arquitetura de software modular, segurança de memória e responsabilidades bem definidas.
 
-## Códigos e Exercícios
-*(Mantenha o resto do seu README atual aqui para baixo)*
+### 1. Classes, Objetos e a Abstração do Domínio
+
+A POO agrupa dados e operações relacionadas em uma mesma entidade, abandonando o modelo de funções soltas operando sobre variáveis globais ou independentes.
+
+* **Classe:** É a especificação (o molde ou planta arquitetônica) que descreve as características e os comportamentos de uma categoria.
+
+
+* **Objeto:** É a instância concreta criada na memória durante a execução do programa a partir da classe.
+
+
+* **Estado e Comportamento:** O estado é mantido pelos membros de dados (atributos), enquanto o comportamento é definido pelas funções-membro (métodos).
+
+
+
+### 2. Encapsulamento e Proteção de Estado
+
+A linguagem utiliza especificadores de acesso para estabelecer uma fronteira rígida entre o que é de uso interno e o que compõe a interface pública, impedindo que o código cliente injete estados inválidos no objeto.
+
+* **Membros `private`:** Ocultam os dados de implementação. Tentativas de acesso direto a atributos privados pelo código externo geram erro de compilação.
+
+
+* **Getters e Setters (Interface Pública):** Funções-membro `public` atuam como intermediárias para consultar ou modificar o estado. O *setter* é o local exato para implementar regras de validação (ex: rejeitar preços negativos antes de tocar na memória).
+
+
+* **Ocultamento vs. Funcionalidade:** Encapsular não é apenas criar getters e setters cegamente para todos os atributos; é expor apenas as operações que façam sentido para a regra de negócio daquela entidade.
+
+
+
+### 3. Construtores e Inicialização Segura
+
+Construtores são funções-membro especiais invocadas automaticamente no instante em que o objeto é instanciado, garantindo que ele nasça em um estado válido.
+
+* **Características:** Possuem o exato mesmo nome da classe e não possuem tipo de retorno (nem mesmo `void`).
+
+
+* **Sobrecarga de Construtores:** Uma classe pode ter múltiplos construtores (ex: um padrão sem parâmetros e um parametrizado), desde que suas assinaturas sejam diferentes.
+
+
+* **Lista de Inicialização de Membros:** É a forma idiomática e mais eficiente de iniciar variáveis em C++. Ela inicializa os atributos estruturalmente antes mesmo do corpo do construtor ser executado (ex: `Produto(std::string n) : nome{n} {}`).
+
+
+* **Ordem de Inicialização:** O compilador sempre inicializa os membros na exata ordem em que foram declarados dentro da classe, independentemente da ordem escrita na lista do construtor.
+
+
+
+### 4. Modularização Arquitetural (Separação `.h` e `.cpp`)
+
+Para manter o projeto escalável, limpo e otimizado para o controle de versão, a interface é separada da implementação.
+
+* **Arquivos de Cabeçalho (`.h` ou `.hpp`):** Contêm o "contrato" da classe — as declarações dos atributos e as assinaturas das funções-membro.
+
+
+* **Arquivos de Implementação (`.cpp`):** Contêm a lógica real das funções, utilizando o operador de resolução de escopo (`::`) para ligar o método à sua respectiva classe (ex: `void Produto::setPreco(double p)`).
+
+
+* **Guardas de Inclusão:** Diretivas de pré-processador como `#pragma once` ou o bloco `#ifndef`, `#define` e `#endif` impedem que o compilador leia a mesma classe duas vezes na mesma unidade de tradução, evitando o erro de redefinição de classe.
+
+
+
+### 5. Tipagem e a Classe `std::string`
+
+O C++ distingue tipos fundamentais nativos da linguagem (como `int`, `double`, `char`, `bool`) de tipos compostos oferecidos pela Biblioteca Padrão.
+
+* A `std::string` é uma classe da biblioteca `<string>`, não um tipo fundamental, o que significa que ela possui funções-membro próprias (como `.size()`) e sobrecarga de operadores (como `+` para concatenação).
+
+
+* A indexação começa em zero, e tentar acessar uma posição fora do limite ($n-1$) resulta em falha de memória.
+
+
+
+### 6. Matriz de Paradigmas em C++
+
+A linguagem permite resolver o mesmo problema sob diferentes óticas, impactando diretamente a engenharia do software.
+
+* **Imperativo:** Foca em laços manuais e mutabilidade contínua (ex: variáveis contadoras locais), o que dificulta o paralelismo devido a efeitos colaterais e condições de corrida.
+
+
+* **Orientado a Objetos:** Foca no encapsulamento. Protege o estado interno, garantindo manutenibilidade e baixo acoplamento.
+
+
+* **Funcional (C++20 Ranges):** Prioriza a imutabilidade e diz "o que fazer" em vez de "como fazer" (ex: usando `std::views::filter`). Ao eliminar variáveis que mudam de estado, torna-se naturalmente seguro para múltiplas threads (thread-safe).
+
+
+
+---
+
+### Pontos de Atenção Prática e Provas
+
+* **O Ponto e Vírgula Final:** A declaração de uma classe exige obrigatoriamente um `;` após a chave de fechamento (`};`). Esquecer isso trava a compilação no arquivo de cabeçalho.
+
+
+* **Instanciação Falsa:** Escrever `class Produto { };` não cria um objeto, apenas especifica o tipo. O objeto só existe na memória ao ser declarado explicitamente (`Produto p;`).
+
+
+* **Inclusões Implícitas:** Nunca dependa de um cabeçalho carregando outro em segundo plano. Se o arquivo usa fluxo de saída e strings, ele deve incluir `#include <iostream>` e `#include <string>` explicitamente.
+
+
+
+Verifique se a densidade técnica e os tópicos abordados estão alinhados com o que você visualiza para a sua pasta `Resumo -> Texto_Explicativo`. Assim que você aprovar a estrutura, gero o README introdutório para o repositório com o direcionamento correto e seguimos para a refatoração do sistema bancário.
