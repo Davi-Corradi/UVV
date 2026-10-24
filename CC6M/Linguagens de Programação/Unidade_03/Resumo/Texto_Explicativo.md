@@ -46,6 +46,7 @@ assinatura. Essa regra define a **sobrecarga de funções**, permitindo que fun�
 
 **Código de exemplo e a Ambiguidade:**
 
+´´cpp
 #include <iostream>
 
 // Protótipos com assinaturas distintas:
