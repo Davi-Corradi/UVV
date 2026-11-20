@@ -41,7 +41,7 @@ void Livro::exibirDados() const {
     std::cout << "Autor: " << autor << "\n";
 
     if (anoPublicacao == 0) {
-        std::cout << "Ano: 0 (Ano invalido! O ano foi definido com 0 por padrao)\n\n";
+        std::cout << "Ano: 0 (Ano invalido! O ano foi definido como 0 por padrao)\n\n";
     } else {
         std::cout << "Ano: " << anoPublicacao << "\n";
     }
